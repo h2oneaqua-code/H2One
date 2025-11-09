@@ -9,5 +9,8 @@
   },
   "keywords": ["water bottles", "manufacturing", "custom bottles"],
   "author": "H2One",
-  "license": "MIT"
+  "license": "MIT",
+  "vercel": {
+    "outputDirectory": "."
+  }
 }

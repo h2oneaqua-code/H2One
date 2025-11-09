@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact H2One - Get in Touch</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- EmailJS CDN -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <span class="logo-text">H2One</span>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="products.html" class="nav-link">Products</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contact Header -->
+    <section class="contact-header">
+        <h1>Get in Touch</h1>
+        <p>We're here to help with your questions and custom bottle orders</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-content">
+        <div class="contact-container">
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <h2>Contact Information</h2>
+                <div class="info-item">
+                    <h4>📧 Email</h4>
+                    <p><a href="mailto:H2Oneaqua@gmail.com">H2Oneaqua@gmail.com</a></p>
+                </div>
+                <div class="info-item">
+                    <h4>📞 Phone</h4>
+                    <p><a href="tel:+919422792483">+91 9422792483</a></p>
+                </div>
+                <div class="info-item">
+                    <h4>📍 Address</h4>
+                    <p>Manufacturing Facility<br>India</p>
+                </div>
+                <div class="info-item">
+                    <h4>⏰ Business Hours</h4>
+                    <p>Monday - Friday: 9:00 AM - 6:00 PM IST<br>Saturday: 10:00 AM - 4:00 PM IST<br>Sunday: Closed</p>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form-wrapper">
+                <h2>Send us a Message</h2>
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" placeholder="Subject / Inquiry Type" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="6" placeholder="Tell us about your custom bottle requirements..." required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn" id="submitBtn">Send Message</button>
+                    <div id="contactSuccessMessage" class="success-message" style="display: none;">
+                        ✓ Message sent successfully! We'll get back to you within 24 hours.
+                    </div>
+                    <div id="contactErrorMessage" class="error-message" style="display: none;">
+                        ✗ Failed to send message. Please try again or email us directly.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Section -->
+    <section class="social-section">
+        <h2>Connect With H2One</h2>
+        <p>Follow us for updates, industry insights, and product launches</p>
+        <div class="social-links">
+            <a href="#" class="social-link">LinkedIn</a>
+            <a href="#" class="social-link">Facebook</a>
+            <a href="#" class="social-link">Instagram</a>
+            <a href="#" class="social-link">Twitter</a>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>Ready to Place Your Order?</h2>
+        <p>Start your custom bottle journey with H2One today</p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf35MkZ4L_uz9IZnOpdVDbJmYFIOsSfIvXfn2Jd0DVf2EudCA/viewform?usp=publish-editor" target="_blank" class="cta-button">Get Custom Quote</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>H2One</h4>
+                <p>Premium water bottle manufacturing for brands worldwide</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email: H2Oneaqua@gmail.com</p>
+                <p>Phone: +91 9422792483</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 H2One Manufacturing. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- EmailJS Integration -->
+    <script>
+        // Initialize EmailJS with new User ID
+        (function() {
+            emailjs.init('OOGk61oWp7LoeFcZu');
+        })();
+
+        // Handle form submission
+        window.onload = function() {
+            document.getElementById('contactForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+                
+                const submitBtn = document.getElementById('submitBtn');
+                const successMsg = document.getElementById('contactSuccessMessage');
+                const errorMsg = document.getElementById('contactErrorMessage');
+                
+                // Change button text to show loading
+                submitBtn.textContent = 'Sending...';
+                submitBtn.disabled = true;
+                
+                // Hide previous messages
+                successMsg.style.display = 'none';
+                errorMsg.style.display = 'none';
+                
+                // Prepare template parameters with email field included
+                const templateParams = {
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    subject: document.getElementById('subject').value,
+                    message: document.getElementById('message').value
+                };
+                
+                // Send email using EmailJS with new service and template IDs
+                emailjs.send('service_zmzzcso', 'template_zj1nn6c', templateParams)
+                    .then(function(response) {
+                        console.log('SUCCESS!', response.status, response.text);
+                        successMsg.style.display = 'block';
+                        document.getElementById('contactForm').reset();
+                        
+                        // Reset button after 3 seconds
+                        setTimeout(() => {
+                            submitBtn.textContent = 'Send Message';
+                            submitBtn.disabled = false;
+                        }, 3000);
+                    })
+                    .catch(function(error) {
+                        console.error('FAILED:', error);
+                        errorMsg.textContent = `✗ Failed: ${error.text || error.message || 'Unknown error'}. Please try again or email us directly at H2Oneaqua@gmail.com`;
+                        errorMsg.style.display = 'block';
+                        
+                        submitBtn.textContent = 'Send Message';
+                        submitBtn.disabled = false;
+                    });
+            });
+        }
+    </script>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - H2One Water Bottles</title>
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#2c5aa0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="H2One">
+    <link rel="apple-touch-icon" href="/images/icon-192.png">
+</head>
+<body>
+    <!-- PWA Install Banner -->
+    <div id="installBanner" class="install-banner" style="display: none;">
+        <div class="install-content">
+            <img src="/images/icon-192.png" alt="H2One App Icon" class="install-icon" onerror="this.style.display='none'">
+            <div class="install-text">
+                <h4>Install H2One - Connect with Your Campus</h4>
+                <p>mycampusmate.in</p>
+            </div>
+            <button id="installBtn" class="install-button">Install</button>
+            <button id="dismissBtn" class="dismiss-button">&times;</button>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <span class="logo-text">H2One</span>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="products.html" class="nav-link active">Products</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Products Header -->
+    <section class="products-header">
+        <h1>Our Product Range</h1>
+        <p>Premium water bottles crafted for your brand's success</p>
+    </section>
+
+    <!-- Products Grid -->
+   <section class="products-section">
+    <h2>Our Customizable PET Bottle Range</h2>
+    <div class="products-container">
+        <div class="product-card">
+            <div class="product-image">
+                <img src="/images/typesofbottle/round.png" alt="Classic Round Bottle - Professional transparent water bottle for everyday use" onclick="openImageModal(this.src, this.alt)" style="cursor: pointer;">
+            </div>
+            <h3>Classic Round Bottle</h3>
+            <p class="product-size">250ml - 1000ml</p>
+            <p class="product-desc">Our most popular PET bottle choice for everyday hydration. The classic cylindrical body is perfect for high-volume orders and Bisleri, Kinley, and Aquafina-style branding.</p>
+            <ul class="product-features">
+                <li>✓ Market Standard Shape</li>
+                <li>✓ Crystal Clear PET Transparency</li>
+                <li>✓ Highly Efficient for Mass Production</li>
+                <li>✓ 360° Wrap-Around Label Potential</li>
+            </ul>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="/images/typesofbottle/slim.png" alt="Premium Slim Bottle - Sleek and elegant design for luxury brands" onclick="openImageModal(this.src, this.alt)" style="cursor: pointer;">
+            </div>
+            <h3>Premium Slim Bottle</h3>
+            <p class="product-size">500ml - 750ml</p>
+            <p class="product-desc">Sleek, tall, and narrow design for premium positioning. This elegant bottle is ideal for high-end brands like Evian and Himalayan, adding an exclusive appeal to your product.</p>
+            <ul class="product-features">
+                <li>✓ Sleek, Tall Aesthetic</li>
+                <li>✓ Ergonomic One-Hand Grip</li>
+                <li>✓ High-End Finish Options (e.g., Frosted)</li>
+                <li>✓ Preferred Choice for Luxury Water/Juices</li>
+            </ul>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="/images/typesofbottle/square.png" alt="Square Modern Bottle - Contemporary geometric design for brand visibility" onclick="openImageModal(this.src, this.alt)" style="cursor: pointer;">
+            </div>
+            <h3>Square Modern Bottle</h3>
+            <p class="product-size">500ml - 1000ml</p>
+            <p class="product-desc">Modern square design with flat sides for maximum label visibility and stacking efficiency. Popular for cold-pressed juices and brands seeking a strong geometric identity.</p>
+            <ul class="product-features">
+                <li>✓ Unique Square Shape</li>
+                <li>✓ Maximized Flat Label Area</li>
+                <li>✓ Superior Shelf Appeal & Stacking</li>
+                <li>✓ Modern, Business-Focused Aesthetic</li>
+            </ul>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="/images/typesofbottle/ovul shape.png" alt="Ergonomic Sports Bottle - Secure flip cap design for active users" onclick="openImageModal(this.src, this.alt)" style="cursor: pointer;">
+            </div>
+            <h3>Ergonomic Sports Bottle</h3>
+            <p class="product-size">500ml - 1000ml</p>
+            <p class="product-desc">Designed for athletes and active lifestyles. Features an easy-grip contour and is compatible with secure flip-caps and pull-push sports closures.</p>
+            <ul class="product-features">
+                <li>✓ Active Lifestyle Focus</li>
+                <li>✓ Compatible with Sports Caps</li>
+                <li>✓ Enhanced Ergonomic Contour</li>
+                <li>✓ Tested for Durability & Leak-Proof Seal</li>
+            </ul>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="/images/typesofbottle/wine.png" alt="Wine Bottle Shape - Elegant design for premium beverages" onclick="openImageModal(this.src, this.alt)" style="cursor: pointer;">
+            </div>
+            <h3>Wine Bottle Shape</h3>
+            <p class="product-size">1000ml - 2000ml</p>
+            <p class="product-desc">Elegant wine-style bottle with a long neck and tapered body — ideal for premium beverages and upscale branding. Offers excellent label placement and a refined silhouette suited for wineries, specialty oils, and premium gift packaging.</p>
+            <ul class="product-features">
+                <li>✓ Unique Dumbbell Shape</li>
+                <li>✓ High-Volume Capacity (Up to 2L)</li>
+                <li>✓ Standout Promotional Item</li>
+                <li>✓ Focuses on the Fitness/Gym Niche</li>
+            </ul>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="/images/typesofbottle/measurement.png" alt="Measurement Bottle - Built-in hydration tracking markers" onclick="openImageModal(this.src, this.alt)" style="cursor: pointer;">
+            </div>
+            <h3>Measurement Bottle</h3>
+            <p class="product-size">500ml - 1500ml</p>
+            <p class="product-desc">Features built-in measurement and time markers for hydration tracking. Perfect for wellness brands, corporate health programs, and nutritional supplement companies.</p>
+            <ul class="product-features">
+                <li>✓ Integrated Time & Volume Markers</li>
+                <li>✓ Supports Hydration Goals</li>
+                <li>✓ Health-Conscious Design</li>
+                <li>✓ Ideal for Corporate Gifting</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="customization-info">
+    <h2>Extensive Customization Options</h2>
+    <div class="customization-grid">
+        <div class="customization-item">
+            <h4>🎨 Color Selection</h4>
+            <p>15+ standard colors or create your own custom Pantone shade for perfect brand matching</p>
+        </div>
+        <div class="customization-item">
+            <h4>🖨️ Printing Methods</h4>
+            <p>Screen printing, digital print, embossing, and shrink-sleeve labels for professional branding</p>
+        </div>
+        <div class="customization-item">
+            <h4>🔧 Cap Options</h4>
+            <p>Screw caps, flip caps, sports caps, and custom closure configurations available</p>
+        </div>
+        <div class="customization-item">
+            <h4>💰 Bulk Discounts</h4>
+            <p>Competitive volume pricing for 1000+, 5000+, and 10000+ unit orders</p>
+        </div>
+        <div class="customization-item">
+            <h4>📏 Size Flexibility</h4>
+            <p>Custom sizing from 250ml to 2000ml, tailored to your exact requirements</p>
+        </div>
+        <div class="customization-item">
+            <h4>⚡ Fast Turnaround</h4>
+            <p>Quick production timelines with sample approvals and quality assurance</p>
+        </div>
+    </div>
+</section>
+
+    <!-- Material Info Section -->
+    <section class="materials-section">
+        <h2>Premium Materials & Standards</h2>
+        <div class="materials-grid">
+            <div class="material-card">
+                <h4>BPA-Free PET</h4>
+                <p>Most popular transparent plastic, lightweight and affordable for mass distribution</p>
+            </div>
+            <div class="material-card">
+                <h4>HDPE Semi-Transparent</h4>
+                <p>Specialized material for edible oils, detergents, and premium positioning</p>
+            </div>
+            <div class="material-card">
+                <h4>Tritan™ Premium</h4>
+                <p>Crystal clear, durable material for maximum clarity and longevity of product life</p>
+            </div>
+            <div class="material-card">
+                <h4>Food Grade Certified</h4>
+                <p>All materials meet Indian food safety standards and international regulations</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>Ready to Order Your Custom Bottles?</h2>
+        <p>Get started with a custom quote - we'll work with you every step of the way</p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf35MkZ4L_uz9IZnOpdVDbJmYFIOsSfIvXfn2Jd0DVf2EudCA/viewform?usp=publish-editor" target="_blank" class="cta-button">Request a Quote</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>H2One</h4>
+                <p>Premium water bottle manufacturing for brands worldwide</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email: H2Oneaqua@gmail.com</p>
+                <p>Phone: +91 9422792483</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 H2One Manufacturing. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal" style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.9);">
+        <div class="modal-content" style="position: relative; margin: auto; padding: 0; width: 90%; max-width: 700px; top: 50%; transform: translateY(-50%);">
+            <span class="close" onclick="closeImageModal()" style="position: absolute; top: 15px; right: 35px; color: #f1f1f1; font-size: 40px; font-weight: bold; cursor: pointer;">&times;</span>
+            <img class="modal-image" id="modalImage" style="width: 100%; height: auto; display: block;">
+            <div id="modalCaption" style="margin: auto; display: block; width: 80%; max-width: 700px; text-align: center; color: #ccc; padding: 10px 0; height: 150px;"></div>
+        </div>
+    </div>
+
+    <script>
+        // PWA Install functionality
+        let deferredPrompt;
+        const installBanner = document.getElementById('installBanner');
+        const installBtn = document.getElementById('installBtn');
+        const dismissBtn = document.getElementById('dismissBtn');
+
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            
+            // Show custom install banner
+            setTimeout(() => {
+                installBanner.style.display = 'block';
+                installBanner.classList.add('show');
+            }, 2000);
+        });
+
+        installBtn.addEventListener('click', async () => {
+            if (deferredPrompt) {
+                deferredPrompt.prompt();
+                const { outcome } = await deferredPrompt.userChoice;
+                deferredPrompt = null;
+                installBanner.style.display = 'none';
+            }
+        });
+
+        dismissBtn.addEventListener('click', () => {
+            installBanner.style.display = 'none';
+        });
+
+        // Register service worker
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then((registration) => {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch((registrationError) => {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+
+        // Existing image modal functions
+        function openImageModal(src, alt) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            const caption = document.getElementById('modalCaption');
+            
+            modal.style.display = 'block';
+            modalImg.src = src;
+            caption.innerHTML = alt;
+        }
+
+        function closeImageModal() {
+            document.getElementById('imageModal').style.display = 'none';
+        }
+
+        // Close modal when clicking outside the image
+        window.onclick = function(event) {
+            const modal = document.getElementById('imageModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeImageModal();
+            }
+        });
+    </script>
+    <script src="js/script.js"></script>
+
+    <style>
+        .install-banner {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+            padding: 12px 16px;
+            display: none;
+            transform: translateY(-100%);
+            transition: transform 0.3s ease;
+        }
+
+        .install-banner.show {
+            transform: translateY(0);
+        }
+
+        .install-content {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .install-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            flex-shrink: 0;
+        }
+
+        .install-text {
+            flex: 1;
+        }
+
+        .install-text h4 {
+            margin: 0;
+            font-size: 14px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .install-text p {
+            margin: 0;
+            font-size: 12px;
+            color: #666;
+        }
+
+        .install-button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .install-button:hover {
+            background: #0056b3;
+        }
+
+        .dismiss-button {
+            background: none;
+            border: none;
+            font-size: 20px;
+            color: #666;
+            cursor: pointer;
+            padding: 4px 8px;
+            margin-left: 8px;
+        }
+
+        .dismiss-button:hover {
+            color: #333;
+        }
+
+        /* Adjust body padding when banner is shown */
+        body.banner-shown {
+            padding-top: 70px;
+        }
+
+        @media (max-width: 768px) {
+            .install-content {
+                padding: 0 8px;
+            }
+            
+            .install-text h4 {
+                font-size: 13px;
+            }
+            
+            .install-text p {
+                font-size: 11px;
+            }
+            
+            .install-button {
+                padding: 6px 12px;
+                font-size: 13px;
+            }
+        }
+    </style>
+</body>
+</html>

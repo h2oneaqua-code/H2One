@@ -1,8 +1,13 @@
 {
-  "name": "my-v0-project",
-  "version": "0.1.0",
-  "private": true,
+  "name": "h2one-website",
+  "version": "1.0.0",
+  "description": "H2One Water Bottle Manufacturing Website",
+  "main": "index.html",
   "scripts": {
-    "build": "echo 'no build script'"
-  }
+    "build": "echo 'Static site - no build needed'",
+    "start": "python -m http.server 3000"
+  },
+  "keywords": ["water bottles", "manufacturing", "custom bottles"],
+  "author": "H2One",
+  "license": "MIT"
 }
